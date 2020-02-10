@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Title of your page</title>
+    <meta charset="utf-8">
+    <meta description="main description for your website">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    </head>
+        <body>
+            <main>
+            <!--section for top navigation bar-->
+            <nav class="navbar">
+                <label class="navbar-toggle" id="js-navbar-toggle">
+                   <img alt="svgImg" src="D:\Projects\Images\w_menu.png" style="height: 25px;"> 
+                </label>
+                <a href="#" class="logo">logo</a>
+                <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#home" accesskey="h" class="nav-links">Your Ingredients</a>
+                </li>
+                <li>
+                    <a href="#category1" accesskey="1" class="nav-links">Recipes</a>
+                </li>
+                <li> 
+                    <a href="#category2" accesskey="2" class="nav-links">Favorites</a>
+                </li>
+                <li>
+                    <a href="#category3" accesskey="3" class="nav-links">Tips & Tricks</a>
+                </li>
+                <li>
+                    <a href="#category4" accesskey="4" class="nav-links">Shopping List</a>
+                </li>
+                </ul>
+            </nav>
+            <!--script to be used for toggle-->
+            <script>
+                let mainNav = document.getElementById('js-menu');
+                let navBarToggle = document.getElementById('js-navbar-toggle');
+
+                navBarToggle.addEventListener('click', function () {
+    
+                 mainNav.classList.toggle('active');
+                });
+            </script>
+    </main>
+    <footer>
+       <p>Copyright	&copy; <span id="year"></span> Elena Musina</p>  
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
+        </body>
+</html>
